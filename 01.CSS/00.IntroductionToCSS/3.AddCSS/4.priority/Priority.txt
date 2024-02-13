@@ -1,9 +1,0 @@
-Priority of cascade
-
-inline>internal and external depend upon placement 
-
-1)external is place over internal than
-inline>internal > external
-
-2)external is place after internal than
-inline>external>internal
