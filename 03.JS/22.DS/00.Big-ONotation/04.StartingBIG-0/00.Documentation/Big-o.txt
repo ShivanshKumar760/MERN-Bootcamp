@@ -1,0 +1,178 @@
+Alright so from last 3 module we have been talking about Big-O and time complexity
+
+
+So lets finally see what is Big-O
+
+
+Big-O is a notation to understand and allow us talk formally about how the runtime of an algorithm grows as the input grows
+
+Big O notation is way to formalize fuzzy counting.
+
+
+
+Big-O defination:
+
+
+We say that an algorithm is O(f(n)) if the number of simple operation the computer has to do is eventually less than a constant time f(n) as n increses
+
+
+Basically what this above text means that the time taken by the computer to perform a task depends on the number of input which is denoted as the function of n where n is the number of input 
+
+The time complexity or runtime of a code will depend on the opeartion and number of input
+
+f(n) is the function of n to represnt the time complexity
+
+f(n) could be linear with linear run time (f(n)=n) 
+
+f(n) could be quadratic f(n)=n^2
+
+f(n) could be constant f(n)=1 
+
+f(n) could be something entirely different 
+
+
+Just think about it as when N ie input grows how the time will grow and how the chart/graph will look like in the trend that what Big-O is .
+
+
+
+Note :When we talk about the Big-O we talk about the worst case scenerio  ie the maximum runtime a code can enter into in other words,
+
+We're basically talking about the upper bound for runtime
+
+
+So lets look back to our previous example and how we can write it in form of Big-O
+
+function addUpTo(n)
+{
+	return n*(n+1)/2 //No matter what the value of n is
+	// the number of operation will remain 3 
+}
+
+And we saw in 3rd module under visualization it follows a flat trend ie constant It is Big-Oh(1)
+
+or O(1)
+
+
+
+2.
+fuction addUpTo(n)
+{
+	let sum=0;
+	for(let i=1;i<=n;i++)
+	{
+		sum+=i;
+	}
+	return sum;
+}
+
+//here the number of operation in for loop will change according to n 
+
+And we saw in chart or graph that it follows a linear trend ie 1:1 trend so it is directly proportional to n
+
+
+O(n)
+
+
+
+Lets take another example :
+
+function countUpAndDown(n)
+{
+	console.log("Going Up");
+	for(var i=0;i<n;i++)
+	{
+		console.log(i);
+	}
+	console.log("Going Down")
+	for(var j=n-1;j>=0;j--)
+	{
+		console.log(j);
+	}
+	console.log("Bye");
+}
+
+So now lets observe its time complexity via breaking down the code 
+
+1.console.log("Going Up"); this will have a constant time complexity of 1 cause no operator just js functions 
+
+2.for(var i=0;i<n;i++)
+	{
+		console.log(i);
+	}
+//This will have a time complexity of n
+
+3.console.log("Going Down")
+//this will have a constant time complexity of 1 cause no operator just js functions 
+
+4.for(var j=n-1;j>=0;j--)
+	{
+		console.log(j);
+	}
+//this will have a time complexity of n 
+
+5.console.log("Bye");
+//this will have a constant time complexity of 1 cause no operator just js function 
+
+
+so total time complexity is 
+
+1+n+1+n+1=2n+3 but we only focus on upper bound so if we remove all the constant value we get n hence it's time complexity is 
+O(n) 
+
+
+
+Now lets take one final example to understand time complexity
+
+function printAllPairs(n)
+{
+	for(let i=0;i<n;i++)
+	{
+		for(let j=0;j<n;j++)
+		{
+			console.log(i,j);
+		}
+	}
+}
+
+
+So what this block of code will do is it will take all the number from 0 to n-1 and print pair of number from 0 to n-1
+
+that is :
+
+i=0 and n=2
+0,0
+0,1
+
+i=1
+1,0
+1,1
+
+Now lets see it's time complexity of the above code :
+
+
+function printAllPairs(n)
+{
+	for(let i=0;i<n;i++)
+	{
+		for(let j=0;j<n;j++)
+		{
+			console.log(i,j);
+		}
+	}
+}
+lets break down :
+
+1.First for loop 
+
+function printAllPairs(n)
+{
+
+}
+
+now the time complexity of first for loop is O(n) 
+
+and the time complexity of second for loop is also O(n)
+
+But the time complexity of second for loop depends upon the first for loop that is how many times the first for loop will iterate .
+
+So the time complexity of second for loop is directly proportional to first for loop which will get multiplied to O(n^2)

@@ -1,0 +1,41 @@
+Hey There ,Welcome back ,So this module as well as the next module they're really one massive section that's why we splited it in half so we dont end up in the behemoth section.
+
+But both of them have to do with algorithm and problem solving pattern or strategies , game plans
+
+Basically we will learn when we are faced with a tough challenge ,some code or a problem we have to solve and we dont know how to do it right off the bat
+
+What are the steps we can take to make it solvable ?
+->And it really falls into two categories and this section will teach us about the basic approach to solving a Problem and then the second section or section after this is about specific blueprints or archetypes,little strategies we can keep in our back pocket that help solve a lot of problems
+
+
+Objective of this module is :
+-----------------------------
+1.define what an algorithm is 
+2.devise a plan to solve algorithms
+3.compare and contrast problem solving pattern including frequency counters ,two pointer and divide and conquer
+
+
+What is an algorithm?
+--------------------------
+->really it just means a process or set of seps to accomplish a ceratin task 
+
+Why do we need to know this ?
+-----------------------------
+->Almost everything that we do in programming involves some sort of algorithm , whether its super basic things that we are doing 
+or even super complex application that we are building  
+
+
+How do we improve ?
+----------------
+
+1.Devise a plan for solving problems
+2.Master common problem solving patterns
+
+
+And we will start will problem solving strategies and we will see them in detail but lets layout it
+
+1.Understand the problem 
+2.Explore Concrete problem 
+3.Break it down
+4.solve/simpilify the program
+5.Look back and refactor the problem

@@ -1,0 +1,114 @@
+So lets take a look at more concrete example and lets compare two solution to same problem .
+
+Ex1:
+
+Suppose we want to write a function that calculates the sum of all number from one up to a given number n in which n should be included:
+
+ie if n =3 the sum will be calculated from 1 to 3 ie 1+2+3 is equal to six (6).
+
+
+Now the first way to do is :
+
+1.take a  variable sum and set it to zero and iterate till number 'n' for i=1 till n and then increment value of i in variable sum like below
+
+function addUpTo(n)
+{
+	let total = 0;
+	for(let i=1 l i<=n ;i++)
+	{
+	total +=i;
+	}
+	return total;
+}
+
+2.another way is to use the formula for sum of n natural number ie n*(n+1)/2
+
+
+function addUpTo(n)
+{
+	return n*(n+1)/2
+}
+
+now this one is definitely less intutive as we can see it's a lot shorter and it is just a single line of code .
+
+ie we are just using mathematical formula.
+
+So there are two working solution but which one is better : well if we obeserve carefully also
+	
+	the 1'st method use loop or iteration and hence to add number till n it will have to be executed n number of times which is a bit time consuming but 
+
+	the 2'nd method is just about substituting the value of n in the equation and finding the result which is more powerful and time efficient 
+
+
+
+and we can test our little theory via timing our code using the performane.now() which will note the time required to open the window where performace.now() is encounterd :
+
+we will use two performace.now() to capture the time of our code 1.before executing the function and then after executing the function this will tell us the time difference b/w starting of function and ending via the difference b/w the two performance.now()
+
+function addUpTo(n)
+{
+	let total = 0;
+	for(let i=1 l i<=n ;i++)
+	{
+	total +=i;
+	}
+	return total;
+}
+let t1=performance.now();
+addUpTo(1000000000);
+let t2=performance.now();
+console.log(`Time elapsed:${(t2-t1)})
+
+
+Output:
+Time Elapsed:1.241600000000475
+
+
+
+lets do this for other method :
+
+
+function addUpTo(n)
+{
+	return n*(n+1)/2
+}
+
+
+let t1=performance.now();
+addUpTo(1000000000);
+let t2=performance.now();
+console.log(`Time elapsed:${(t2-t1)})
+
+
+Output:
+
+Time Elapsed:0.0001000000004749
+
+
+So as we can see the second code takes less time compare to first code 
+
+But this process is not the most reliable of manually timing things like comparing before and after of a code and comparing it to the other function and it's not that easy for us to talk about ie how would i actually write down or how would i give label of how efficient this one is compared to the other one 
+like is it based off the percentage of speed or what
+
+
+and it gets a little blurry
+
+
+And this brings us to the problem with time:
+
+cause :
+
+
+1.different machine will record different times so its not that reliable
+
+
+2.The same machine will record different times
+
+
+3.For fas algorithms , speed measurement may not be precisse enough
+
+
+And for all these reason we want to have a general term,talk about how code compares to other code 
+
+without having to go through all of this and that's where Big-O notation comes in.
+

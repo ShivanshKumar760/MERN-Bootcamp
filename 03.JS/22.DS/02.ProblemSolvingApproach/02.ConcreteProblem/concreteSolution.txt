@@ -1,0 +1,109 @@
+Hey welcome back this is the part two of the simple five step program to changing your life and realizing your dreams as long as your dreams have to do with solving problems
+
+
+So till now in our problem solving approach we looked at the first step toward problem solvingn ir 
+
+1.Understanding the problem
+->So interviewer asked us a question and we have a moment of panic .We start by understanding the question , trying to figure out the output and making sure we understand the question and inputs
+
+But after this come up with a concrete examples-this  is tied very closely to understanding the problem .
+
+
+And example also provide sanity checks so that your eventual solution works or once we have a solutionn , you can tell if it works how it should , because you'll know at that point cause you already have the example ,you know,the inputs and the outputs that you should get .
+
+
+
+So if have a concrete example we can check your work ,but also we can learn more information by doing these example,and this apply on a larger scale ,things like user stories or unit tests on a smaller scale ,but still we know a bigger context 
+
+
+Unit tests are used all the time to help layout hoow something should work for a smaller feature .
+
+So here are the steps that i Take around exploring concrete examples.
+
+SO we are faced with a problem
+
+1.Start with simple examples
+->So you have restated and understood the problem it's time to write down few example 
+
+->Now write down two or three simple example with an inout and then the output and it should be simple example at first the one that should make the easiest use cases then progrees to make more complex examples.
+
+2.Progress to More Complex Examples .
+
+
+And then explore the edge cases ie 
+
+3.Explore Examples witj Empty Inputs
+
+And then try to find out what will happen if user give invalid input 
+
+4.Explore Examples with Invalid Inputs
+
+Lets Take a Example and use the above pointer in it .
+
+Ex:Write a function which takes inn a string and returns count of each character in the string .
+
+
+->so it's a relatively straight forward question byt there are many questions , many example that we could try out and use to learn about the problem.
+
+->Suppose the function is charCount() and inside this we pass a string "aaaa"
+
+charCount("aaaa")
+
+->this function should return something like this :{a:4}
+
+and another example can be :
+
+charCount("Hello");{H:1,e:1,l:2,:0:1}
+
+->So now we can dive deeper into our example related to problem like should we just return back the number of character in there or can we also return back the character count of character not in the function like:
+
+charCount("aaaa");
+
+can we return a output like this:
+
+{a:4,b:0,,c:0.......z:0}
+
+->Because if we do that it might make our code a lot easier,cause if every letter 
+was already in there set to zero,them it makes it simpler as we go,because then we dont have to add in A or B if it's already in there , we just have to increment it .
+
+
+//Now progrss to more complex example for inputs
+
+like what id someone tried to pass a long string with space and special character 
+
+like below:
+
+"my phone number is 182763"
+
+so what shouldn we return in this case do we want to account for spaces or special character 
+
+
+or what if someone passed teo words in a string with them having a character same as other but one in smaller cap another in large cap(UpperCase) like below :
+
+"Hello hi"
+
+do we have to count H and h as one ie include there count here being H/h:2
+
+
+or two different character like:
+
+H:1
+h:1 
+
+
+//explore example with empty inputs 
+
+-what if somebody does a char count and dosent padd anything in like this or an empty string->
+
+charCount(" ")
+
+->for this do we want to return null or false or undefined or maybe an error
+
+basically what can we return
+
+
+ //Explore example with invalid inputs :
+
+ -what if someone pass in number or boolean instead of string or a single character
+
+ ->What can we return 

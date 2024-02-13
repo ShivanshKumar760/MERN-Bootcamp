@@ -1,0 +1,72 @@
+/* intial position */
+
+ /* .leftP
+{
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+
+} */
+
+/*.topP
+{
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    margin-top:40px;
+}
+*/
+
+/* .leftP
+{
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    position: absolute;
+    left:40px;
+} */
+
+
+
+
+
+/* topP */
+/* .topP
+{
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    margin-top:40px;
+    position: absolute;
+    top:-30px;
+    top: 80px;
+}  */
+
+
+
+
+/* bottomP */
+/* .bottomP {
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    margin-top:40px;
+    position: absolute;
+    bottom:40px;
+} */
+
+
+
+/* rightP */
+.rightP
+{
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    margin-top:40px;
+    margin-left: 40px;
+    position: absolute;   
+    right:50px;
+}
+
+

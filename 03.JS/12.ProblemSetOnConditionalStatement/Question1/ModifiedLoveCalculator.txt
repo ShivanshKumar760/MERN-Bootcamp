@@ -1,0 +1,2 @@
+Using Random Function Make a Love Calculator like FLAMES and then use conditional 
+Statement if and else to display a custom message based on Love Score result 

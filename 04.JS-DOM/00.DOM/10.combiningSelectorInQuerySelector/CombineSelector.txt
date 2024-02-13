@@ -1,0 +1,11 @@
+Using querrySelector we can combine Css  selector like below 
+
+id + class 
+querrySelector("#id_name  class_name")
+
+tag name + class (two different tag)
+querrySelector("tag_name class_name")
+
+tag name + class (same ag)
+querrySelector("tag_name.class_name")//for specific tag  
+

@@ -1,0 +1,98 @@
+Alright so now we shift gears a little bit and we are going to talk about something called space complexity
+
+Everything we have talked about so far,we've been worrying about time ,about how fast the algorithms run with runtime is and that's called time complexity
+
+We've been analyzing the runtime of an algorithm as the size of input increases. 
+
+
+Now Let's talk about what happens to the space that an algorithm takes up as the size of the input increases.
+
+So we can still use the big O notation for the same thing ,use the same formal syntax for describing what happens to space ie the amount of memory that's taken up in order to run the code in our algorithm
+
+
+
+let's look at few pointer :
+
+*What about the inputs:
+-------------------------
+One is that obviously as N grows ,if we're approaching infinity the size of the input itself which is N is going to grow .
+
+When we will talk about the space complexity Sometimes we'll hear the term auxiliary space complexity to refer to space required by the algorithm,not including the space taken up by the inputs .
+
+
+Space Complexity In JS Rules of thumb
+------------------------------------
+
+1.Most primitives data type like(booleans,number,undefined,null)are constant space
+
+2.String require O(n) space (where n is the string lenght)
+
+
+3.Refrence type (array and object) are generally O(n),where n is the lenght for arrays or the number of keys (objects)
+
+So lets take a example :
+-------------------------
+Example 1
+
+
+function sum(arr)
+{
+	let total = 0;
+	for(let i=0;i<arr.length;i++)
+	{
+		total+=arr[i];
+	}
+	return total;
+}
+
+So remember space complexity depends upon the varibale creation ,arr or object creation etc ie when our algo will create object
+
+So for the above code lets find space complexity.
+
+function sum(arr)
+{
+	let total = 0;
+	for(let i=0;i<arr.length;i++)
+	{
+		total+=arr[i];
+	}
+	return total;
+}
+
+so the varibale total will have a space complexity  of 1 and let i=0 in for loop will have space complexity of one but as we said above that array has a space complexity of n so does that mean the above code is of space complexity 1 well no cause althought the loop will run n times due 
+to array lenght which is n but we are not talking about the time complexity but we are talking about the space complexity which means creation of variable or other types in algo
+
+and inside for loop we are using total which is already declare above so the total space complexity is 1
+
+lets look at another example :
+
+Example 2:
+------------
+
+function double(arr)
+{
+	let newArray=[];
+	for(let i=0;i<arr.length;i++)
+	{
+		newArray.push(2*arr[i]);
+	}
+	return newArray;
+
+}
+
+Now lets breakdown the above code to find space complexity
+
+function double(arr)
+{
+	let newArray=[];//Now array space complexity is n but since no element is inside it it will 
+	//be treated as simple variable of space complexity 1
+	for(let i=0;i<arr.length;i++)
+	{
+		newArray.push(2*arr[i]);//Now although newArray is predefine above but since array is refrence type that is Reference Value: JavaScript provides three types of Reference values that include Array, Object, and Function. The size of a reference value is dynamic therefore It is stored on Heap. hence when ever we will push something in array a new memory will have tp be allocated which depnds upon arr lenght which is passed 
+	}
+	return newArray;
+
+}
+
+
+hence space complexity is O(n)

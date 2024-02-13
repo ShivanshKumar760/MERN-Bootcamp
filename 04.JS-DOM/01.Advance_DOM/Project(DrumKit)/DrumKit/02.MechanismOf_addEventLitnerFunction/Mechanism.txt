@@ -1,0 +1,52 @@
+Mechanism of Event Listner function in JavaScript 
+--------------------------------------------------
+so before actually seeing the Mechanism of addEventListener() function in JavaScript
+lets see it's syntax:
+
+    addEventListener("event", function_name);
+
+so if you see addEventListener() is a function which takes another function name as an input 
+but till now all the function we saw only took parameter which are of data type int , float
+,String or maybe an array like the below:
+
+function add(x,y)
+{
+    return x+y;
+}
+
+let x=5;
+let y=4;
+console.log(add(x,y));
+//so as we can see till now we use to make a function and pass parameter into it which
+were mostly variable like the above program but we never passed a function in another function
+as a argument.
+
+Well this concept of One function taking another function as a parameter is known as 
+High Order Function:
+
+What are High Order Function ?
+-------------------------------
+A High Order Function is a function which takes one or more functions as a parameter/argument,or 
+return a function as a result.
+
+Ex:
+function greet(gretting)
+{
+    return `Hi!! ${name}';
+}
+
+function greet_msg(msg,name,greeting)<----------------------------------------------------
+{  //and from here greet_msg will call greet() function                                                                                      |
+    return '${greet(name)} $msg';                                                        |
+}                                                                                        |
+greet_msg("Welcome to js","Shivansh",greet);   //will call greet_msg and control will go to 
+
+output:
+
+Hi!!Shivansh Welcome to js
+
+function such as filter(),map(),reduce(),addEventListener() etc are all example of Higher 
+Order Functions.
+
+
+Note the function we pass as an argument to another function is called the callback function .

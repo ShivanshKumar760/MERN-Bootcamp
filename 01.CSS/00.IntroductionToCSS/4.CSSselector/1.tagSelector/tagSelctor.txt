@@ -1,0 +1,21 @@
+CSS element/tag selector
+-----------------------------
+-The element/tag selector selects HTML tag by name :
+
+<html>
+    <head>
+        <style>
+            p{text-align:center;color:red;}
+        </style>
+    </head>
+    <body>
+        <p>This style will appear on every paragraph</p>
+        <p id = "para">me too </p>
+
+    </body>
+</html>
+
+Explnation:
+
+So under style tag or style body , we have selected the p tag that is paragraph tag ,so any change done 
+in p style will reflect in all paragraph.

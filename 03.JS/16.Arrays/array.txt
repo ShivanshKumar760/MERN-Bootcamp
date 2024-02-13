@@ -1,0 +1,57 @@
+What is an array?
+
+Ans:- array is an object that represents a collection of similar type of elements.
+
+Array can be declared using 3 different methods -
+1.By array literal
+2.By creating instance of Array directly (using new keyword)
+3.By using an Array constructor (using new keyword)
+--------------------------------------------------------------------------------
+Synatx to declare array is :-
+
+var arrayname=[value1,value2.....valueN];  //value should be of same data type
+
+I)JavaScript array literal
+
+The syntax of creating array using array literal is given below:
+
+var arrayname=[value1,value2.....valueN];  
+As you can see, values are contained inside [ ] and separated by , (comma).
+
+Let's see the simple example of creating and using array in JavaScript.
+
+var guestList=["Sahil","Upasana","Shivansh","Chitra"];
+
+this is a array of string values which is used to represent a guest list
+
+the elements of an array can be accessed individually using indexing .
+
+Indexing refer to numbering the position of elements from 0 to n-1 where n is the size of
+array calculated from 1 to n so if array size is 10 then indexing will be from 0 to 9
+guestList[0]//"Sahil"
+guestList[1] // will give answer "Upasana"
+
+
+2) JavaScript Array directly (new keyword)
+The syntax of creating array directly is given below:
+
+var arrayname=new Array();  
+Here, new keyword is used to create instance of array.
+
+
+var emp = new Array();  
+emp[0] = "Arun";  
+emp[1] = "Varun";  
+emp[2] = "John";   
+}  
+
+
+3) JavaScript array constructor (new keyword)
+Here, you need to create instance of array by passing arguments in constructor so that we don't have to provide value explicitly.
+
+The example of creating object by array constructor is given below.
+
+  
+var emp=new Array("Jai","Vijay","Smith");  
+ 
+  

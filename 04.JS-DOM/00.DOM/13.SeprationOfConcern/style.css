@@ -1,0 +1,9 @@
+.btn{
+   width: 100px;
+   height: 100px; 
+}
+
+.onCLickButton
+{
+    background-color:yellow;
+}

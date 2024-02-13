@@ -1,0 +1,28 @@
+break
+The break statement terminates the current loop, switch, or label statement and transfers program control to the statement following the terminated statement.
+
+Syntax:
+break;
+---------------------------------------
+
+
+Example :
+let i = 0;
+
+while (i < 6) {
+  if (i === 3) {
+    break;
+  }
+  console.log(i);
+  i = i + 1;
+}
+
+console.log(i);
+---------------------------------------
+label
+
+Identifier associated with the label of the statement. If the statement is not a loop or switch, this is required.
+
+Synatax:
+
+break label;

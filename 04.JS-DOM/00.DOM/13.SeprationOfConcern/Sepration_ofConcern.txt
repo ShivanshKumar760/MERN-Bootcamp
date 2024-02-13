@@ -1,0 +1,100 @@
+Q.WHAT IS SEPRATION OF CONCERN ?
+-----------------------------------
+Ans:-Sepration of concern is related to how our website works well we know that,
+
+HTML--is used to structure our website and CSS -- is used to style our website 
+whereas JavaScript is used to handle functionality of the website
+
+But in our previous directories we havent been able to follow this rule of thumb as we are using
+JavaScript to manipulate style of our website which it can be used for but it should be more used 
+for functionality,
+
+Now one might argue that what if we are on a website and we click onto a object and it changes 
+color So here by clicking on a object we want our element color to change that is its style property
+to change hence  we can use JavaScript to chnage the style property ,well the answer is yes we can
+
+but the more suitable way  or a optimal solution or approch would be a property offered by 
+document object that is the classList
+
+So suppose we have a html file here
+<html>
+    <head></head>
+    <body>
+        <button class="btn">Click me </button>
+        <script src="i.js"></script>
+    </body>
+</html>
+
+CSS
+-----
+.btn{
+    width: 100px;
+    height: 100px;
+    
+}
+
+//Now what we want in this site is that when we click on the button its color changes to yellow
+
+There are few ways we can look at :
+1)
+EventListener()//Will read button click 
+{
+    //if EventListener is true:
+    document.querySelector("button").style.backgroundColor ="yellow";
+}
+/*
+Now this can be done but eventually we  are just manipulating style we need to add functionality 
+*/
+
+//for that we can use classList
+
+Syntax:
+document.querySelector("button").classList;
+DOMTokenList:["btn",value:"btn"]//btn is the class associated with button tag
+
+2)We can predefine some style for on clicking button and then by using JavaScript
+we can add a class in button tag provinding a functionality to button tag without 
+touching it's style property and doing the job.
+
+
+<html>
+    <head></head>
+    <body>
+        <button class="btn">Click me </button>
+        <script src="i.js"></script>
+    </body>
+</html>
+
+CSS
+-----
+.btn{
+    width: 100px;
+    height: 100px;
+    
+}
+
+.onCLickButton
+{
+    backgroundColor:"yellow";
+    }
+
+
+JS 
+----
+
+EventListener(true)
+{
+    document.querySelector("button").classList.add("onCLickButton");
+}
+
+
+And not pnly we can add class but we can remove the class as well with:
+
+document.querySelector("button").classList.remove("onCLickButton");
+
+
+Another method in classList is toggle which is like a on off Switch 
+
+document.querySelector("button").classList.remove("btn");
+
+

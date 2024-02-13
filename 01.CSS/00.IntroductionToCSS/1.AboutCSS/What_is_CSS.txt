@@ -1,0 +1,38 @@
+CSS stands for cascading style sheet .It is a style sheet language which is used to describe 
+the look of a website structured by html and for formatting the webiste.It provide and 
+essential feature to HTML ,it is generally used with HTML to change the style of a webpage
+and user interfaces.It can also be used with any XML document including plain XML and XVL
+
+CSS is used along with HTML and JavaScript in most webiste to create user interface for web 
+applications and mobile applications
+
+There are many more other style sheet languages like
+Sas Syntacticaly awesome style sheet and less-liner ss
+
+When Does Need for CSS genrated in web development .
+------------------------------------------------------
+In very beginning when internet was new to people there was no css only html was present,but
+when of the things that developer wanted to do was style there website and make them the way they
+wanted to look website , but they were really really limited by html and Marc Andresson sent 
+a mail who was founder of MOSAIC the most earliest browser in the history of web and he later 
+found the netscape and recently Andreessen Horowitz vc fund
+
+And this mail he answered the developer about styling the website
+
+He stated that controlling document ie the website code is not possible the way it is in Microsoft
+word and TeX "Sorry,you're screwed"
+
+To which the W3Consortium responded by realeasig a new version of html
+ie HTML 3.2 which cmaeout in 1997 , it introduced new html tags like (<font> which allowed you 
+to describe font size , color and face of content),<center> which allowed you to format you document
+
+But these tags are depricated that mens they no longer are used to style the document the way
+they were used back then cause the main motoof HTML was to structure the documen and not to style
+it cause using tags like font ,color ,background-color ie background style,element alignment 
+,border and size had to be repeated by the user on every web page.This was a very long process
+.For example  if we are developing a large web site where fonts and color information are added 
+onto every single page ,it will become very difficult to use these tage and maintain code redeablity
+It is  a very long and expensive process.
+
+Well to overcome this in 1996 W3Consortium led by HaKon Wium lie and they introduced CSS
+this allowed to attach style ie fonts and color to html document.

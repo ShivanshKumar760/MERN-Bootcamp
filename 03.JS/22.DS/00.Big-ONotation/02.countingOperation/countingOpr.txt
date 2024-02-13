@@ -1,0 +1,88 @@
+Okay well in previous module we talked about the problem with using time as our way of comparing code 
+
+Which were :
+
+1.different machine will record different times so its not that reliable
+
+
+2.The same machine will record different times
+
+
+3.For fas algorithms , speed measurement may not be precisse enough
+
+
+----------------------------------------------------------------
+
+
+So if we're not using time , what should we do then
+
+
+Well what we can do is Rather than counting seconds , which are so variable that they can vary many times
+
+there is a similar approch than counting the exact seconds that it takes for code to run,
+what we can do instead is count the number of simple operations , that a computer has to perform beacuse that will remain constant no matter what computer are we on 
+
+So if we just simplified it like crazy and said that ,you know ,this one algorithm has five operation to run 
+and the other one has seven ,it dosent matter what you know the specifiaction of our computer are or the mood
+that my laptop is in that day , the time we get might  be different ,but the times will always be determined 
+by the number of operation , so we can use that rather than the exact time
+
+And so we can just focus on the number of simple operations that computer has to perform .
+
+
+Lets take a example to understand this :
+
+
+function addUpTo(n)
+{
+	return n*(n+1)/2;
+}
+
+lets count the operation in this :
+
+1xMultiplication
+1xAddition
+1xDivision
+
+So in this code the computer has to perform 3 operation regardless of the size of n ,whether it's
+small or massive
+
+
+But lets take the other example :
+
+function addUpTo(n)
+{
+	let sum=0;
+	for(let i=0;i<=n;i++)
+	{
+		sum+=1;
+	}
+	return sum;
+}
+
+
+Operation here are 
+1xAddition 
+1xAssignment
+
+so if we see 1 addition and 1 assignment  is less number of operation than 3 operation in same line correct but the this 1 addition and 1 assignment  performance will have be performed n number of times so if n is small the solution is faster and if n is big its slow
+
+But if we look at the overall loop it much more time taking
+
+function addUpTo(n)
+{
+	let sum=0;//1xAssignment 
+	for(let i=0;i<=n;i++)//i=0 1xAssignment 
+	//i<=n nxComparision and i++ nxaddition and 
+	n times assign
+	{
+		sum+=1;//2n times operation (cause of + ans =)
+	}
+	return sum;
+}
+
+Now all the operation in loop will also have to be performed n times.
+
+total n=5 and static operation two
+
+genralised formula is 5n+2

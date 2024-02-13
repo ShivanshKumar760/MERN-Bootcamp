@@ -1,0 +1,571 @@
+CSS Position 
+---------------
+
+Before CSS Positioning we need to / have to understand that without any external 
+CSS also different browser apply different css property by default .
+
+
+And for that we need to understand few important things about structuring website using 
+HTML
+
+1)Content is everything in HTML/website
+=>Now we know that the inline tag only take width as much as content needs and with 
+block tag although they take 100% line the height is still determined by the content
+unless we specify it externally using CSS but without CSS it depends on Content .
+
+
+2)Order of elements come from HTML code 
+
+=>The order of content like heading , paragraph , link and image comes from the order
+of those tag in html code :
+
+Ex
+---
+<html>
+    <head>
+        <title>Hey</title>
+    <head>
+    <body>
+        <h1>I LOVE BACON</h1>
+        <p>bacon</p>
+        <p>bacon</p>
+        <img src="bacon.jpg">
+    </body>
+</html>
+
+
+So the content will also be rendered the way it is written in HTML code that is:
+
+first : heading 
+second :paragraph
+third :image
+
+
+
+#)Children sit on parents lets Understand it with example 
+
+lets take a div tag : <div></div>
+
+provide some style to it lets make the div square :
+    div{width:100px; height:100px; background-color:red;}
+
+add a h1 tag inside it .
+
+<div>
+    <h1>a programmer</h1>
+</div>
+
+Now we can see <h1> is on div ie div is parent(container) to h1 element(which is child to parent)
+
+*Outer tag are parents and inner tag are child .
+
+This <h1> heading will sit on top of div ie <h1> will be more towards viewer and far 
+from back screen  and div will be far from viewer and closer to back screen.
+
+
+This introduces the concept of Z direction,ie on display we have X and Y axis which is 
+for viewer.
+
+and Z axis will be toward Screen .
+
+
+
+
+Now these 3 are the basic HTML property which Position tag by default.
+
+
+Apart from them we can also set CSS Positioning property to set the Position of tag
+on screen .
+
+*Position property
+->There are 4 Position property:
+1)static 
+2)relative
+3)absolute
+4)fixed
+
+I)Static 
+---------
+This is by default Position for html element.It always positions element according 
+to the normal flow of the page  .It is not affected by the top,bottom,left and 
+right property
+
+
+II)Relative:
+------------
+What this does is it allows us to position 
+the element that we select relative to it current or static position
+in the html document 
+
+Lets undertand with example:
+
+<body>
+    <div>
+    </div>
+</body>
+
+css:
+
+div
+{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    left: 20px;
+}
+
+Now what this css code will do is it will set 
+the div position to relative of it  current
+position and when we set it left coordinate to 
+20 px :
+
+What it does is it takes the left edge of div as
+the main axis
+
+and will shift the element to the right if the value is positive
+and if the value is negative it will shift to right
+
+
+lets see for all the four coordinate ;
+
+a)top(positive):
+------
+<body>
+    <div>
+    </div>
+</body>
+
+css:
+
+div
+{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    top:20px;
+}
+
+
+this will push the div 20px below the original position,from top edge.
+
+top(negative)
+
+<body>
+    <div>
+    </div>
+</body>
+
+css:
+
+div
+{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    top:-20px;
+}
+
+this will push the div 20 px above the original position of the div.
+
+
+b)bottom(positive):
+---------------------
+
+<body>
+    <div>
+    </div>
+</body>
+
+css:
+
+div
+{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    bottom:20px;
+}
+
+will push the div 20px above the bottom edge.
+
+bottom(negative):
+
+<body>
+    <div>
+    </div>
+</body>
+
+css:
+
+div
+{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    bottom:-20px;
+}
+
+will push the div 20 px below the bottom edge.
+
+c)left(positive)
+
+<body>
+    <div>
+    </div>
+</body>
+
+css:
+
+div
+{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    bottom:20px;
+}
+
+will push element 20 px away from the left edge 
+of the div current position toward right
+
+left(negative)
+---------------
+
+<body>
+    <div>
+    </div>
+</body>
+
+css:
+
+div
+{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    left:-20px;
+}
+will push 20 px toward left edge of screen from
+the left edge of element
+
+
+
+d)right(positive)
+
+
+<body>
+    <div>
+    </div>
+</body>
+
+css:
+
+div
+{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    right:20px;
+}
+
+will push the element away from the right 
+edge of the element's current position towards
+left edge of screen
+
+right(negative)
+
+<body>
+    <div>
+    </div>
+</body>
+
+css:
+
+div
+{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    right:-20px;
+}
+
+
+will push the element away from the right 
+edge of the element's current position towards
+right  edge of screen
+
+
+
+Priority of coordinates :
+
+top coordinate will always have Priority 
+above bottom coordinate
+
+
+and left side will have priority above right .
+
+
+
+Things to Note while changing the position and coordinates of the element 
+
+1)When we change a element position , there is no change in other elements position 
+
+Lets understand it with a example :
+
+Suppose we have two divs let it be stacked one on another:
+
+<body>
+    <div class="top" bgcolor:"red">
+    </div>
+
+    <div class="bottom" bgcolor:"yellow">
+    </div>
+</body
+
+
+the bgcolor is not for div tag so :
+use style 
+
+<body>
+    <div class="one" style="width:200px; height: 200px;background-color: red;">
+        
+    </div>
+    <br/>
+    <div class ="two"  style="width:200px; height: 200px;background-color: black;">
+    </div>
+</body>
+
+Now lets apply position on div 1 :
+
+.one{
+position:relative;
+top:70px;}
+
+
+SO as we can see the div1 overlaps with div2 cause when
+we change the position of a element it does not affect the 
+other element
+
+
+2)Second Point to note is :
+When we move the position of a element to top , bottom and left ,right it creates a margin between it initial
+position ie initial edge from where it is moved and current edge
+
+
+
+
+III)Absolute positioning 
+--------------------------
+
+Unlike relative position where we move element position from it current/initial position to specified position
+in absolute position we move element relative to body ie when we say right:20px in Absolute it means position
+the html element 20px away from html page right edge and not position the element 20px away from its initial
+right edge(element).
+
+
+So suppose we have a website with a div about 100 px wide and 100px in height:
+
+<body>
+    <div>
+    </div>
+</body>
+
+css:
+
+div
+{
+    width: 100px;
+    height:100px;
+    background-color:red;
+}
+        
+
+Now lets apply position to it .
+
+Updated Css 
+---------------
+
+css:
+
+div
+{
+    width: 100px;
+    height:100px;
+    background-color:red;
+    position:absolute;
+    right:20px;
+}
+       
+will position image at a distance of 20px from image right edge to body right edge
+
+Lets see the same thing for the top,bottom,left and right coordinate with both negative and positive coordinate.
+
+1)Left 
+
+a)left(positive)
+
+<body>
+    <div>
+    </div>
+</body>
+
+div
+{
+    width: 100px;
+    height:100px;
+    background-color:red;
+    position:absolute;
+    left:20px;
+}
+
+will position the div 20px away from the html page left edge
+
+b)left(negative)
+
+<body>
+    <div>
+    </div>
+</body>
+
+div
+{
+    width: 100px;
+    height:100px;
+    background-color:red;
+    position:absolute;
+    left:-20px;
+}
+
+so unlike the relative position where when we set the 
+positive value the div move away from left edge 
+of body and also left edge of element
+
+in absolute its simple the more u decrease the value
+it will come close to perticular edge of body.
+
+
+2)top
+
+b)left(negative)
+
+<body>
+    <div>
+    </div>
+</body>
+
+div
+{
+    width: 100px;
+    height:100px;
+    background-color:red;
+    position:absolute;
+    top:20px;
+}
+
+move the element 20 px away from top edge of body.
+
+3)bottom 
+
+<body>
+    <div>
+    </div>
+</body>
+
+div
+{
+    width: 100px;
+    height:100px;
+    background-color:red;
+    position:absolute;
+    bottom:20px;
+}
+
+will move the div element toward bottom edge but 20px
+away from bottom edge.
+
+
+3)right 
+
+<body>
+    <div>
+    </div>
+</body>
+
+div
+{
+    width: 100px;
+    height:100px;
+    background-color:red;
+    position:absolute;
+    right:20px;
+}
+
+will position image at a distance of 20px from image right edge to body right edge
+
+
+Note in absolute position Parent tags
+plays an important role that is if the parent tag 
+is not A body tag of html but some other tag like
+main,aside or div the position of there child in 
+absolute mode will be relative to them and not the 
+html or web page body.
+
+
+lets understand with example 
+
+<body>
+    <div class = "container">
+        <div class = "child">
+        </div>
+    </div>
+</body>
+
+css 
+-----
+.container
+{
+width:300px;
+height:300px;
+background-color:red;
+position:relative;
+}
+
+.child
+{
+width:100px;
+height:100px;
+background-color:yellow;
+position:absolute;
+}
+
+Now lets change the position of our child div
+
+
+.container
+{
+width:300px;
+height:300px;
+background-color:red;
+position:relative;
+}
+
+.child
+{
+width:100px;
+height:100px;
+background-color:yellow;
+position:absolute;
+right:20px;-----|
+                |
+}               |
+_______________|                
+|_>This will shift our div away 20px from container right edge and not html
+body tag right edge

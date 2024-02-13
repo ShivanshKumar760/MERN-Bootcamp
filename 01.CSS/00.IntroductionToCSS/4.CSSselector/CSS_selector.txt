@@ -1,0 +1,174 @@
+Css selector are used to select the tag/element and its inner content we want to style.Selector are 
+the part of CSS rule set.CSS selector select the HTML element according to its  id , class , type , attribute
+etc
+
+There are several different types of CSS selector
+
+i)CSS tag/element selector
+ii)CSS id  selector
+iii)CSS class selector
+iv)CSS universal selector
+v)CSS group selector
+
+-------------------------------------------------------------------------------------------------
+1)CSS element/tag selector
+-The element/tag selector selects HTML tag by name :
+
+<html>
+    <head>
+        <style>
+            p{text-align:center;color:red;}
+        </style>
+    </head>
+    <body>
+        <p>This style will appear on every paragraph</p>
+        <p id = "para">me too </p>
+
+    </body>
+</html>
+
+Explnation:
+
+So under style tag or style body , we have selected the p tag that is paragraph tag ,so any change done 
+in p style will reflect in all paragraph.
+
+------------------------------------------------------------------------------------------------------
+2)CSS id selector
+
+->The id selector selects the id attribute of an HTML element/tag to select elementwith unique id
+
+->An id is always unique within the page  so it is chosen to select a single , unique element.
+
+->It is written with hash or pound symbol # followed by id name 
+
+<html>
+    <head>
+        <style>
+            #para
+            {text-align:center;color:red;}
+        </style>
+    </head>
+    <body>
+        <p>This style will appear on every paragraph</p>
+        <p id = "para">me too </p>
+
+    </body>
+</html>
+------------------------------------------------------------------------------------------------------
+3)CSS class selector
+
+->The class selector selects HTML element with a specific class attribute.It is used with a 
+period or dot operator (.)-full stop followed by the class name 
+
+Note a class name should not start with a number .
+
+
+<html>
+    <head>
+        <style>
+            .center
+            {text-align:center;color:blue;}
+        </style>
+    </head>
+    <body>
+        <h1>Welcome</h1>
+        <p>This style will appear on every paragraph</p>
+        <p id = "para">me too </p>
+        <p class="center">This paragraph should be in center with blue color </p>
+        <h2 class="center">This is a heading and it  should be in center with blue color </h2>
+
+    </body>
+</html>
+
+
+
+
+
+*)CSS class selector for perticular element
+--------------------------------------------
+if we want to specify that one specific element should be affected when using class selector then
+we should use the element name with class selector
+
+    <head>
+        <style>
+            p.center
+            {text-align:center;color:blue;}
+        </style>
+    </head>
+    <body>
+        <h1>Welcome</h1>
+        <p>This style will appear on every paragraph</p>
+        <p id = "para">me too </p>
+        <p class="center">This paragraph should be in center with blue color </p>
+        <h2 class="center">This is a heading and it  should be in center with blue color </h2>
+
+    </body>
+</html>
+
+
+So only p tag with center class will be affected like this and not other tag with same class .
+--------------------------------------------------------------------------------------------------------
+
+4)CSS universal selector
+--------------------------
+The universal selector is used as a wildcard character.It selects all the elements on the page and stylised 
+it .
+
+universal selector is *
+
+    <head>
+        <style>
+            *
+            {text-align:center;color:blue;font-size:20px}
+        </style>
+    </head>
+    <body>
+        <h1>Welcome</h1>
+        <p>This style will appear on every paragraph</p>
+        <p id = "para">me too </p>
+        <p class="center">This paragraph should be in center with blue color </p>
+        <h2 class="center">This is a heading and it  should be in center with blue color </h2>
+
+    </body>
+</html>
+
+---------------------------------------------------------------------------------------------------------
+5)CSS group selector
+-------------------
+->The CSS group selector is used to select all the element with the same style  defination 
+
+->Grouping selector is used to minimize the code .Commas(,) are used to seprate each selector in grouping 
+
+
+    <head>
+        <style>
+            h1{text-align:center;color:blue;}
+            h2{text-align:center;color:blue;}
+            #para{text-align:center;color:blue;}
+        </style>
+    </head>
+    <body>
+        <h1>Welcome</h1>
+        <p>This style will appear on every paragraph</p>
+        <p id = "para">me too </p>
+        <p class="center">This paragraph should be in center with blue color </p>
+        <h2 class="center">This is a heading and it  should be in center with blue color </h2>
+
+    </body>
+</html>
+
+
+<style>
+            h1{text-align:center;color:blue;}
+            h2{text-align:center;color:blue;}
+            #para{text-align:center;color:blue;}
+</style>
+
+so instead of doing this we can group them cause same CSS is being applied on them
+
+h1,h2,#para
+{
+text-align:center;
+color:blue;
+}
+

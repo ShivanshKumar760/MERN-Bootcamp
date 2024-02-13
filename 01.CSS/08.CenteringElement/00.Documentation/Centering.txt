@@ -1,0 +1,175 @@
+Centering Element with CSS :
+--------------------------------
+
+Now lets use some of the knowledge about positioning in order to make our website the way we 
+want .
+
+
+->lets take a website example of the css module series.
+
+
+website pic 
+
+Now the first thing we want to achieve is we want to center all the Element on the page ie 
+image , heading and paragraph
+
+There are couple of ways to do that but easiest way is to use a CSS property
+text-align 
+
+Note the text-align property should be always set in the parent tag ie since we want to 
+center the image , heading and paragraph element we have to put the text-align property
+inside the parent tag(<body>)
+
+lets see with code:
+
+<body>
+    <img src="cloud.png">
+    <h1>Hey I'am Shivansh</h1>
+    <p>i am a <span>pro</span>grammmer</p>
+    <img src="cloud.png">
+    <img src="hill.png">
+</body>
+
+Now since we have to align thses tag in center we need to put the text-align property
+in body tag which is the parent tag for this element .
+
+CSS--
+
+body
+{
+    margin:0;
+    text-align:center;
+} 
+
+Note :But the problem with text-align is that it only works with inline and block element .
+
+and as soon as we apply any css on these  two type of element ie inline or block like 
+width,height or display property (text-align) wont work.
+
+let's see with example :
+
+<body>
+    <img src="cloud.png">
+    <h1>Hey I'am Shivansh</h1>
+    <p>i am a <span>pro</span>grammmer</p>
+    <img src="cloud.png">
+    <img src="hill.png">
+</body>
+
+css 
+---
+
+body
+{
+    margin:0px;
+    text-align:center;
+}
+
+h1
+{
+    width : 10 %;}//10% of screen
+
+
+pic 
+
+
+
+so as we can see as sookn as we changed our <h1> width it's text-align ment property
+also changed and it is not aligned in center anymore.
+
+
+So how can we resolve this well the other way to align the element in center is :
+->To set the element margin.
+
+
+Synatx of css margin:
+
+margin:top right bottom left;
+
+Now to center the element or a tag we use one of the margin value ie auto
+
+so if we want to align a element to center with no margin on top and bottom we cann do 
+it easily with help of auto
+
+{
+    margin:0px auto 0px auto;
+}
+
+auto - auto value is a unique property or value under margin which we can use to set 
+the margin property of element so that it can vertically and horizontally take as much 
+amount of margin it can given there is a sufficient amount of space
+
+So to center the element we will use this Synatx:
+
+margin:0px auto 0px auto;
+
+but instead of writing it like this again and again we can shorten it very easily.
+
+using :{margin:0px auto ;}
+
+where the first value is for top and bottom and the second value is for left and right
+
+
+But for now we will just use the text-align property of the element to center 
+
+So lets remove our change in <h1> element ie the width and margin css and lets go back
+to default value and just change the text-align property to center .
+
+
+html
+---------
+<body>
+    <img src="cloud.png">
+    <h1>Hey I'am Shivansh</h1>
+    <p>i am a <span>pro</span>grammmer</p>
+    <img src="cloud.png">
+    <img src="hill.png">
+</body>
+
+css 
+---
+
+body
+{
+    margin:0px;
+    text-align:center;
+}
+
+
+Pic :
+
+Now the problem here is that the two <img> tag containing cloud and hill are inline tag
+and that's why our hill <img> is not aligining in middle cause of the cloud image 
+as cloud image is before it and its taking its space , now we need to align the hill image 
+in center with our text and since cloud image is in the flow of html file its pushing hill image 
+to side so we need to take the cloud out if the flow and we can do that by changing the 
+cloud image position property and as soon we change the position property of cloud 
+image the text-align property will no longer work and cause of position property 
+it wont go back to original place instead it will get place random somewhere before hill
+
+
+html
+---------
+<body>
+    <img src="cloud.png">
+    <h1>Hey I'am Shivansh</h1>
+    <p>i am a <span>pro</span>grammmer</p>
+    <img src="cloud.png" class="bottom-cloud">
+    <img src="hill.png">
+</body>
+
+css 
+---
+
+body
+{
+    margin:0px;
+    text-align:center;
+}
+
+.bottom-cloud
+{
+    position:absolute;
+}
+
+pic

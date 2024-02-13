@@ -1,0 +1,52 @@
+Alright so as we mentioned in the last module,one of the biggest challenges for new developer ,new programmers is
+
+
+->Solving problem cause for most people it's easy to learn syntax and 
+we can copy other people's code or remake an application following a step by step instruction.
+
+But the hardest thing has to do with solving new 
+problems and new challenges and we do tend to get better at this with time regardless of the 
+technologiess we use or the programming language we are working with and problem solving is an 
+important skill and lot of it will naturally come with time 
+
+But it's worth having a game plan to follow step by step guide basically.
+
+it's not going to solve your problems for ypu , but it helps you sit and think about and break problems 
+
+and it helps solution come about naturally .
+
+Lets start with understanding the problem:
+
+->so if we are prensted with a problem here are the things which we should ask ourself and the interviewer
+
+i.Can we restate the problem in our own words?
+
+ii.What are the input or types of input that go into the problem ?
+
+iii.What are the output that should come from the solution to the problem? 
+
+
+iV.Can the outputs be determined from the inputs?In other words ,do i have enough information to solve the problem?
+
+v.How should I label the important peices of data that are a part of the problemm ?
+
+
+Lets take a example to run through these steps:
+
+Ex:Write a function which takes two number and return their sum:
+
+
+let's break it down :
+
+1.repharase :basiclly pass two parameters in the function and return back there sum
+
+2.Types of input will be number here we will take integer not floating point number and also limit the upper bound value 
+
+3.so a single output will come which will sum of two parameter 
+
+4.if input value are 3 and 7 output should be 10
+but what if someone dosent give the second number input should we display zero , null undefined or add zero these question can be ask to interviwer
+
+
+5.important labels :function name can be add()
+->arguments can be label as num1 and num2 for more clearity

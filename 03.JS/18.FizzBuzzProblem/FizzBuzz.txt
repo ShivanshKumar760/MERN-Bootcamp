@@ -1,0 +1,6 @@
+In FizzBuzz problem we are given a collection of number from 1 to certain range of n and when 
+ever a number which is divisible by 3 comes print Fizz when a number divisible by 5 comes 
+print Buzz andn when a number divisible by both 3 and 5 comes print FizzBuzz 
+
+Build a function which push a number when called  and push fizz when number is divisible by 3
+buzz when number is divisible by 5 and fizzbuzz when number is divisible by both 3 and 5

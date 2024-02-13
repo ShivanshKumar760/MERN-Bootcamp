@@ -1,0 +1,25 @@
+Variable is container to store a value ,this is very similar to conatainer used to store rice similary in javascript variable we can store value like number , string ,array--collection of number or string 
+
+Now this container variable is place in memory location which store this value.
+
+The data type of variable in javascript can be change anytime when ever we want that is suppose if we created a variable with initial value having number we can later assign the variable to a string.
+
+
+ex of decalring variable in c and javascript
+
+C          
+
+int a;
+a=2;
+//changing data
+a="hey";//this line will give error in C cause we have defined a variable as a int type so it cannot store a string value
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+JavaScript
+
+var a =2;
+a="hey"//this wont produce any error 
+
+and thats why javascript is dynamically typed language and it modify its variable type depending on the value given.

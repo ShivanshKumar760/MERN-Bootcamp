@@ -1,0 +1,44 @@
+A fragment of code that produce a value is called an expression.Every Value written litreally is called an expression for ex: 77; or "harry"  
+
+
+Operator :
+
+1.Arithmetic operator -
++   Addition Operator
+-   subtraction operator
+*   multiplication operator
+/   Division operator
+**  Exponential operator
+%   Remainder  operator
+++  increment by +1
+--  decrement by -1
+
+2.Assignment Operator
+= equal to
++= equal to and then plus so ex:a+=b--a=a+b
+-= equal to and then subtract,ex:a-=b -- a=a-b
+*= equal to and then multiply
+/= equal to and then divide 
+%= equal to and then assign remainder to it
+**=equal to and then assign exponential value to it
+++= equal to and increment it 
+--= equal to and decrement it
+
+3.Comparission operator 
+== equal to that is check if two variable have equal data
+!= not equal to 
+=== equal value and type
+!== not equal value or type
+> greater
+< less 
+>= greater then or equal to
+<= less than or equal to
+? terenary operator
+
+
+4.Logical operator
+&& and aka logical and
+|| logical or 
+! not 
+
+logical operator operates on boolean value

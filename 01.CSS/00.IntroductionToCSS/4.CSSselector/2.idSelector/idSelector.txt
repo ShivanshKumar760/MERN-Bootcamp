@@ -1,0 +1,21 @@
+CSS id selector
+-----------------
+->The id selector selects the id attribute of an HTML element/tag to select elementwith unique id
+
+->An id is always unique within the page  so it is chosen to select a single , unique element.
+
+->It is written with hash or pound symbol # followed by id name 
+
+<html>
+    <head>
+        <style>
+            #para
+            {text-align:center;color:red;}
+        </style>
+    </head>
+    <body>
+        <p>This style will appear on every paragraph</p>
+        <p id = "para">me too </p>
+
+    </body>
+</html>

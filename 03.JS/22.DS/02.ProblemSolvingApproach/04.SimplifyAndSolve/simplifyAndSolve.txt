@@ -1,0 +1,61 @@
+Welcome back so till now we've talk about the first three components ,the first three steps in problem solving out of 5 steps
+
+-It's time to solve and simplify the problem cause its always better to simplify a problem first and then solve it but if you feel like you can solve without simplifying just go ahead with it.
+
+
+Simplification Means:-trying to ignore the part that is giving us a really hard time in order to focus on everything else.
+
+Now why is it even worth doing this ?
+->well first of all in an interview setting ,often you want to have something to show for yourself 
+so instead of getting stuck on one difficult part of a problem and making zero progress at all ,because of it and that's why it's 
+much better to just start writing code to do the stuff you know how to do ,all the while keepig 
+in mind that you don need to incorporate that harder part back in.
+
+->Secondly ,it's pretty common that in simplifying a problem we'll gain insight into the actual solution  and to the harder part of the problem and something will click into place .
+
+
+Steps to simplify
+
+
+1.Find the core difficulty in what you're trying to do 
+
+2.Temporarily ignore that difficulty 
+
+3.Write a simplified solution
+
+4.Then incorporate that difficulty back in the solution
+
+
+Let's work on a example :
+
+
+Write a function which takes in a string and returns count of each character in the string .
+
+function charCount(str)
+{
+	//make a object 
+	let charObj={};
+	//loop the string 
+	for(let i=0;i<str.length;i++)
+	{
+		var char=str[i].toLowerCase();
+		//check if the key is already in object
+
+		if(charObj[char]>0)
+		{
+			charObj[char]++;
+		}
+		//if not add
+		else
+		{
+			charObj[char]=1;
+		}
+	}
+	
+	return charObj;
+}
+
+//Now the challenge here is only choosing the alphanumeric character and we dont know how to do that so we will just skip it for now and run the above solution and later integrate that part.
+
+
+

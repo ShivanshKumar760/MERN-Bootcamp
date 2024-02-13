@@ -1,0 +1,102 @@
+Alright In this module we just want to touch on some of the built in array methods ,There are many of them 
+
+Lets get started :
+
+1.push-O(1)
+
+2.pop-O(1)
+
+3.shift-O(1)
+
+4.unshift-O(N)
+
+5.concat-O(N)
+
+6.slice-O(N)
+
+7.splice-O(N)
+
+8.sort-O(N*log N)
+
+9.forEach/map.filter/reduce/etc..-O(N)
+
+
+
+a)Concat 
+
+>concat() method takes a array as a parameter and push or join the second array with the first array or the array on which the method is used.
+
+ex:
+
+let arr1=[1,2,3,4];
+let arr2=[5,6,7,8];
+
+console.log(arr1.concat(arr2));
+
+
+Output is :
+
+[1,2,3,4,5,6,7,8]
+
+Now the complexity of concat is O(N) cause for the second array which needs to be concatenated the array element needs to be traversed for array lenght N to push each element in the primary array
+
+
+b)slice 
+
+>slice() method is used to make a copy of array , the slice method takes parameter as starting index and ending endex
+
+array.slice(startingIndex,endingIndex)
+
+
+if dont give endingIndex by default it will be the length(array)
+
+ex:
+
+let arr=[1,2,3,4,5,6,7];
+
+console.log(arr.slice(0,3))
+
+output:
+
+1,2,3
+
+Now the time complexity is O(N) cause for a given range N the array need to be traversed in order to pop the element to another array or output
+
+
+c)splice
+
+>splice() method change the content of an array by removing existing elements and /or adding the new element
+
+
+Ex:
+---
+
+let arr=["Jan","March","April","June"];
+
+arr.splice(1,0,"Feb");
+//what this line of code will 
+//tell the js interpreter that at index 1 put "Feb" and 0 means dont replace anything
+
+so its like insertion operator shift but the thing it can insert at any position and till that position where it needs to insert a value it has to traverse
+
+and it can be n number of element which needs to be traversed and reindex
+
+SO it's time complexity is O(N)
+
+>and we can use splice to replace the element also
+
+
+let arr=["Jan","March","April","June"];
+
+
+arr.splice(4,1,"May");
+
+1 means replace value at 4th index.
+
+
+
+
+d)And for sorting time complexity we will see in sorting module.
+
+
+e)forEach/map these are the function which iterate over array and that's why they have time complexity of O(N).

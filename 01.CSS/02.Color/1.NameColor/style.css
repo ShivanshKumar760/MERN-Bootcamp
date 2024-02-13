@@ -1,0 +1,8 @@
+body{
+    background-color: aqua;
+}
+h1
+{
+/*To specif color we just write name of color*/
+    color : red ;
+}

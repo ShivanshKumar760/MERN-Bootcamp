@@ -1,0 +1,76 @@
+In JavaScript ,both the keywords ie [var] and [let] are used to declare variable .
+
+The let keyword was introduced by or in the later version of javascript known is EcmaScript6 or Just ES6(ES2016).And its the prefferd way to decalre a variable in javascript.
+
+JavaScript let VS var 
+----------------------
+
+Here's the overview of the difference between let and var
+
+let                                                    |      var 
+                                                       |
+->let is block scoped                                  |->var is function scoped.
+->let does not allow redeclaration of Variable         |->var allows redeclaration of variable.
+->Hoisting does not occur in let                       |->Hoisting occur in var.
+
+
+
+I.Var is function scoped.
+-----------------------
+The variable declared using var keyword inside a function can be used anywhere witin the function but not outside of the function.
+
+for example:
+
+function greet()
+{
+	var a ="hello";
+	console.log(a);//variable a can be used anywhere in function greet()
+
+}
+//but cannot ben used here .
+greet();//hello
+-------------------------------------------------------------------------------------------------
+
+
+II.let is block-scoped.
+------------------------
+The variable declared with [let] can only be used or accessed inside a block of code .
+
+For example:
+
+function greet()
+{
+	let a="hello";
+	//a will act as a global variable for if block cause a is local variable for function greet()
+	//and if block is under greet() function and a is dcalared outside the if block()
+
+	//although b cannot be used outside if block.
+	if (a=="hello")
+	{
+		//b can be used here but b cannot be used outside of this if block
+		let b = "world";
+		console.log(a+" "+b);
+
+	}
+	//variable b cannot be used here 
+	console.log(a+" "+b);//this will throw an error.
+
+
+
+}
+//variable a cannot be used outside the function as it is bounded by the block.
+
+greet();
+-------------------------------------------------------------------------------------
+Output :
+hello world
+uncaught Reference :b is not defined error
+
+In the above program , the variable [a] is decalred inside the function and it can be accessed anywhere inside that function greet(){[a] becomes function scoped.}
+
+However the variable[b] is declared inside the if block statement .[b] will be block-scoped and only be accessed inside the if block.
+
+Hence when we try to access b outside if block it gives an error (as shown in above program.)
+---------------------------------------------------------------------------------------------
+
+NOTE:The variable declared inside the function using var and let are both function scoped

@@ -1,0 +1,35 @@
+continue
+The continue statement terminates execution of the statements in the current iteration of the current or labeled loop, and continues execution of the loop with the next iteration.
+
+Syntax :
+
+continue;
+
+
+Example:
+--------
+for (let i = 0; i < 10; i++) {
+  if (i === 3) {
+    continue;
+  }
+  console.log(i);
+}
+o/p
+0
+1
+2
+4
+5
+6
+7
+8
+9
+---------------------------------------
+
+
+Description
+In contrast to the break statement, continue does not terminate the execution of the loop entirely, but instead:
+
+In a while loop, it jumps back to the condition.
+In a for loop, it jumps to the update expression.
+The continue statement can include an optional label that allows the program to jump to the next iteration of a labeled loop statement instead of the current loop. In this case, the continue statement needs to be nested within this labeled statement.

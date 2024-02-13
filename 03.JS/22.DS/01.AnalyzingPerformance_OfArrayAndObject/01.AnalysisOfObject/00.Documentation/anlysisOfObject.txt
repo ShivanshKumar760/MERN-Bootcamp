@@ -1,0 +1,85 @@
+Objectss are like dictionary in python with key and pair value.
+
+Object:
+
+let instructor={
+	firstName:"Kelly",
+	isInstructor:true,
+	favrouiteNumber:[1,2,3,4]
+}
+
+Object are unordered Data structure and everything is stored in key value pairs
+
+
+When to use Objects :
+
+1.when you dont need order 
+
+2.when you need fast access/insertion and removal.
+
+So it has no order but almost everything else is very fast or quick 
+
+Note when we say quick i am talking about constant time for insertion,removal and accessing data .
+
+
+Big O of Objects
+---------------
+
+Insertion:O(1)
+Removal:O(1)
+Searching:O(N)
+Access:O(1)
+
+When we dont need any ordering objects are an excellent choice .
+with most operation having constant time 
+
+and searching has O(N) cause we use loop to iterate in object
+
+
+let instructor={
+	firstName:"Kelly",
+	isInstructor:true,
+	favrouiteNumber:[1,2,3,4]
+}
+
+later in the course we have a section called hash maps where we actually learn a data structure that 
+
+Explains how object work behind the scenes , and tell us a more about how things are actuallu stored inside object in terms of memory
+
+that is what happens when we say instructor object firstName should be set to kelly ,What does JavaScript actually do?
+
+Cause a computer can't necessarily just access a place in memory called firstName ,so there is some additional steps involved along the way there is something called hashing and we will talkm about it later .
+
+
+But for now all that we need to know is JavaScript is able to add something into an object and store , a new peice of information in constant time .
+
+Plus it's also able to retrieve something in constant time , and you could also update something in constant time
+
+
+But searching in array is O(N) ie linear time complexity that cause we dont search a object using key instead we pass a value to check if that value is in the object or not and for that we have to iterate Object N number of times where N is the number of property in a object 
+
+function searchValue(obj,value)
+{
+	let result=false
+	obj2Array=Objects.value(obj);
+	for(let i=0;i<obj2Array.length;i++)
+	{
+		if(obj2Array[i]===value)
+		{
+			result=true;
+		}
+	}
+	return result;
+}
+
+
+Now lets check some of the method time complexity that comes with objects
+
+
+Big-O of Object Method
+----------------------
+
+Object.keys-O(N)
+Object.values-O(N)
+object.entries-O(N)
+hasOwnProperty-O(N)

@@ -1,0 +1,82 @@
+Alright now lets talk about array through the lens of Big O performance and how do they compare to objects
+
+
+Array are in built data structure in Js which can hold multiple different data type value without key like object and values are accessed using index from 0 to length(array)-1
+
+
+Array are ordered data structure 
+
+Ex:
+
+let names=["Michael","Melissa","Andrea"];
+
+let values=[true,{},[],2,"awesome"];
+
+
+When to use arrays
+
+1.when you need order 
+
+2.when you need fast acess of value 
+
+3.removal and insertion of element depend upon the case it can be fast and slow 
+
+Insertion really depends on where we are inserting the data 
+ 
+And Insertion has to do with order as mentioned , each element has an index that corresponds to it .
+
+And if we want to add something in ,let's say I want  to add in the name raj in name array at the very end of array
+
+And that is constant time as O(1) because there's really nothing difficult about that .
+
+We can add the element to the end of array we can give it a new index it's sort of like adding into the object like data strucutre
+
+
+
+So where is the problem in insertion-?
+
+>Well the problem comes when we try and insert at the beginning of an array,and thr reason for that has to do with these indices
+
+let names=["Michael","Melissa","Andrea"];
+
+Cause if we try to add raj at the begining of array.
+
+
+name : Michael Melissa Andrea
+		0        1       2
+
+
+name->push(Raj,at front)
+
+
+name : Raj Michael Melissa Andrea
+		    0        1       2
+
+Now as we can see the index is totally messed up cause Michael is no longer the first element so it wont have
+a index 0 so we have to re index every single element in the array so if there are n item we will have to 
+iterate over n item to re index now that dosent mean that for every element we have to perform one operation 
+it can be 3 ,3 or may be 4N but we only need upper bound value
+
+
+and the same problem occurs while removing element from the beginning of the array
+
+let's see
+
+let names=["Raj","Michael","Melissa","Andrea"];
+
+name : Raj Michael Melissa Andrea
+		0        1       2   3
+
+name->remove(Raj,from beginning)
+
+name :         Michael Melissa Andrea
+	    0        1       2      3
+
+
+Now you can see it again messed up cause at index 0 we have no element so we will have to re index in opposite direction this time  for n items 
+
+
+So push() and pop() are always faster than shift() and unshift()
+
+
+But if its a empty array ,in that case adding to the beginning or end is the same thing.

@@ -1,0 +1,23 @@
+Internal CSS
+--------------
+The internal css/style sheet is used to add a unique style for a single document.It is defined in <head>
+section of the html page inside <style> tag
+
+<html>
+    <head>
+        <style>
+            h1,h2,#para{text-align:center;color:blue;}
+        </style>
+    </head>
+    <body>
+        <h1>Welcome</h1>
+        <p>This style will appear on every paragraph</p>
+        <p id = "para">me too </p>
+        <p class="center">This paragraph should be in center with blue color </p>
+        <h2 class="center">This is a heading and it  should be in center with blue color </h2>
+
+    </body>
+</html>
+
+Disadvantage of internal css is we can style only a single document ie web page at a time and for 
+multi page website we have to write css code again.

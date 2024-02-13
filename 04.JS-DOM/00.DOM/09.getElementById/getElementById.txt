@@ -1,0 +1,39 @@
+The document.getElementById() method returns an Element object that represents an HTML element with an id that matches a specified string.
+
+If the document has no element with the specified id, the document.getElementById() returns null.
+
+Because the id of an element is unique within an HTML document, the document.getElementById() is a quick way to access an element.
+
+Unlike the querySelector() method, the getElementById() is only available on the document object, not other elements.
+that is :The querySelector method lets you retrieve an element using a CSS selector query. The getElementById method retrieves an element by its DOM ID
+The following shows the syntax of the getElementById() method:
+
+const element = document.getElementById(id);
+
+In this syntax, the id is a string that represents the id of the element to select. The id is case-sensitive. For example, the 'root' and 'Root' are totally different.
+
+The id is unique within an HTML document. However, HTML is a forgiving language. If the HTML document has multiple elements with the same id, the document.getElementById() method returns the first element it encounters.
+
+JavaScript getElementById() method example
+
+Suppose you have the following HTML document:
+
+<html>
+    <head>
+        <title>JavaScript getElementById() Method</title>
+    </head>
+    <body>
+        <p id="message">A paragraph</p>
+    </body>
+</html>
+
+The document contains a <p> element that has the id attribute with the value message:
+
+const p = document.getElementById('message');
+console.log(p);
+
+Output:
+
+<p id="message">A paragraph</p>
+
+After selecting an element, you can add styles to the element, manipulate its attributes, and traverse to parent and child elements.

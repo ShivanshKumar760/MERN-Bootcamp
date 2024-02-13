@@ -1,0 +1,38 @@
+CSS group selector
+-------------------
+->The CSS group selector is used to select all the element with the same style  defination 
+
+->Grouping selector is used to minimize the code .Commas(,) are used to seprate each selector in grouping 
+
+
+    <head>
+        <style>
+            h1{text-align:center;color:blue;}
+            h2{text-align:center;color:blue;}
+            #para{text-align:center;color:blue;}
+        </style>
+    </head>
+    <body>
+        <h1>Welcome</h1>
+        <p>This style will appear on every paragraph</p>
+        <p id = "para">me too </p>
+        <p class="center">This paragraph should be in center with blue color </p>
+        <h2 class="center">This is a heading and it  should be in center with blue color </h2>
+
+    </body>
+</html>
+
+
+<style>
+            h1{text-align:center;color:blue;}
+            h2{text-align:center;color:blue;}
+            #para{text-align:center;color:blue;}
+</style>
+
+so instead of doing this we can group them cause same CSS is being applied on them
+
+h1,h2,#para
+{
+text-align:center;
+color:blue;
+}

@@ -1,0 +1,177 @@
+ Big-O Notation :
+
+Need for Big-O notation-the DSA
+is about algorithms , solving challenges
+Computer science and Data structure but for every topic in the DSA course , there is ten to twenty different algorithm implementation or solution that could work or probably way more , So how do we know what's the best algorithm or 
+
+
+So lets scale it down a bit :
+
+lets say there are two valid solutions to a problem,they both work and they're different ,not just in names or variables names or something ,but totally different in approaches One uses a loop and the other uses ,lets say a list or a String or somthing else to accomplish the solution but they both are different.
+
+So how do we decide which of the following solution is best and that's where the Big-O notation comes it's a system or more specifically it'a way of generalizing the code and talking about it and comparing code and its performance too other peice of code 
+
+lets take a example :
+
+Write a function that accepts a string input and returns a reversed copy:
+
+now to implement this there are different ways and few are listed below 
+
+
+
+
+Implementation 1:
+------------------------
+
+function reverse(s) {
+  var o = '';
+  for (var i = s.length - 1; i >= 0; i--)
+    o += s[i];
+  return o;
+}
+
+
+Implementation 2:
+-----------------------------
+function reverse(s) {
+  var o = [];
+  for (var i = s.length - 1, j = 0; i >= 0; i--, j++)
+    o[j] = s[i];
+  return o.join('');
+}
+
+
+Implementation 3:
+----------------------------
+function reverse(s) {
+  var o = [];
+  for (var i = 0, len = s.length; i <= len; i++)
+    o.push(s.charAt(len - i));
+  return o.join('');
+}
+
+
+Implementation 4:
+---------------------------
+function reverse(s) {
+  return s.split('').reverse().join('');
+}
+
+
+
+Implementation 5:
+--------------------------
+function reverse(s) {
+  var i = s.length,
+      o = '';
+  while (i > 0) {
+    o += s.substring(i - 1, i);
+    i--;
+  }
+  return o;
+}
+
+
+Implementation 6:
+------------------------------------------
+function reverse(s) {
+  for (var i = s.length - 1, o = ''; i >= 0; o += s[i--]) { }
+  return o;
+}
+
+
+
+
+Implementation 7:
+----------------------
+function reverse(s) {
+  return (s === '') ? '' : reverse(s.substr(1)) + s.charAt(0);
+}
+
+
+Implementation 8:
+-----------------------
+function reverse(s) {
+  function rev(s, len, o) {
+    return (len === 0) ? o : rev(s, --len, (o += s[len]));
+  };
+  return rev(s, s.length, '');
+}
+
+
+Implementation 9:
+---------------------------
+function reverse(s) {
+  s = s.split('');
+  var len = s.length,
+      halfIndex = Math.floor(len / 2) - 1,
+      tmp;
+ 
+
+     for (var i = 0; i <= halfIndex; i++) {
+        tmp = s[len - i - 1];
+        s[len - i - 1] = s[i];
+        s[i] = tmp;
+      }
+      return s.join('');
+    }
+
+
+Implementation 10
+-------------------------
+function reverse(s) {
+  if (s.length < 2)
+    return s;
+  var halfIndex = Math.ceil(s.length / 2);
+  return reverse(s.substr(halfIndex)) +
+         reverse(s.substr(0, halfIndex));
+}
+
+
+
+
+Implementation 11
+----------------------------
+var reverser  = function(str){
+let string = str.split('');
+
+    for(i=0;i<string.length;i++){
+        debugger;
+        string.splice(i,0,string.pop());
+    
+    } 
+    console.log(string.join())
+}
+reverser('abcdef')
+
+
+
+this implementation are taken from:
+
+https://stackoverflow.com/questions/958908/how-do-you-reverse-a-string-in-place-in-javascript
+
+
+So how do we know out of 11 solution which one is the best well we will get there :
+
+
+But wouldn't it be nice if there was sort of system for classifying code or comparing it,which I have already spoiled  it and said ,that's a big-O sort of is:
+
+
+But lets think of it in a different manner out side of cs,lets consider earthquake and we are in a seismology 101 class in this class very early on ,I world start off by talking about the Richter scale because then that allows us to talk about earthquakes and compare them to one another so that instead of just saying :
+
+	Oh there is a big earthquake and then a bigger one over there , we can say there was 7.5 scale earthquake and then 9.2 over there 
+
+
+I know it's not a kind of a great analogy , but the idea is that we can assign labels , generalised labels to our code -- so instead of saying something like great or awful for our code , we can have a numeric representation and thats what big-o is going to give us
+
+
+Why its important :
+
+
+1.Well its important to have a precise vocabulary to talk about how our code performs
+
+2.Useful for discussing trade-oofs b/w different approaches 
+
+3.When our code slows down or crashes , identifying parts of the code that are inefficient can help us find pain points in our application
+
+4.it comes up in interview!

@@ -1,0 +1,51 @@
+CONDITIONAL STATEMENT :
+
+Sometimes we might have to execute a block of code based on some condition.
+For example a prompt on screen might ask for the age of the user and if its greater then 18 it should display a special message.
+
+and this is where comes the role of conditional statement which executes a block of code if the condition given is true.
+
+In JavaScript we have three forms of if-else statement.
+1.if statement
+2.if...else statement
+3.if...else if...else Statement
+
+Syntax of conditional statement
+
+1.if
+
+if(condtion--true)
+{
+	//code block;
+}
+-------------------
+2.if--else
+
+if(condtion--false)
+{
+	//code block will not get executed in this case
+}
+//and command flow will shift to  else
+else
+{
+	//code block to get executed
+}
+------------------------------------------------------------
+
+3.if--else if--else
+
+when we have more than one condition to check on then we use if--else if--else.
+
+if(condition1)
+{
+	//condition1 true then  this block of code will get execute
+} 
+//condition1 if fails flow of control gets shifted
+else if(condition2)
+{
+	//condition2 true then this block of code will get executed
+}
+else
+{
+	//block of code 
+}

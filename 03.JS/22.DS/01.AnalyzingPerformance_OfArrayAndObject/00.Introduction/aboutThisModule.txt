@@ -1,0 +1,12 @@
+Alright so now we will use the knowledge of Big-O and use it to analyse some of the built in Data Structure 
+
+which are :Arrays and Object
+
+Objectives Of this module :
+
+1.Understand How objects and arrays work,through the lens of Big-O
+
+2.Explain why adding element to the beginning of an array is costly. and check if there are alternatives or if there is a better way of inerting 
+
+
+3.And then Compare and Contrast the runtime for arrays and object as well as built in methods 

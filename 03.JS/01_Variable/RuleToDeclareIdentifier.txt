@@ -1,0 +1,7 @@
+Rules To Declare a Variable or Identifier
+
+1.Letter , digit ,underscore and dollar sign is allowed
+2.Name of variable or identifier should not start with digit .
+3.No space between variable name is allowed
+4.JavaScript reserved word or keywords cannot be used as a variable name.
+5.Variable or idnetifier name are case sensitive ie NAME is not same as name.

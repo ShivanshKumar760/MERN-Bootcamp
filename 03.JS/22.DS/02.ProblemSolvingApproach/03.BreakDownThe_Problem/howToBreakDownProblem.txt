@@ -1,0 +1,61 @@
+Alright Welcome back,
+
+So let's move on to part three ie step three of solving a problem ar least trying to
+
+Till now what we did is :
+1.understood the problem
+
+2.Explore Concrete Example 
+
+Now time to Break down the problem and write the task which needs to be preformed
+
+it dosent have to be a full pseudocode or valid syntax,just a little comment as a guide
+
+So it's recommended to explicitly write down the steps that we will take in order to solve problem
+
+it dosen't have to be ton of details and it dosent have to be line by line 
+
+just the basic component of the solution,and this forces us to think about the code before we write it so that 
+we are not just free wheeling and trying to come up with it on the fly.
+
+
+So lets break down a problem:
+
+Ex:Write a function which takes in a string and returns counts of each character in the string
+
+
+->Lets type up a skeleton:
+
+
+function charCount(string)
+{
+	//do something 
+	//return an object with keys that are lower case alphanumeric character in the string-the value should be count of character
+
+	//lets break down
+	0.make a object
+
+
+	->So to count the ocurrence of character we will have to visit ed ach character ie we will have to iterate over string usin loop
+
+	1.loop over string-to check each character.
+
+	->and we have to lowercase each character 
+	to add it in the object andwe have to 
+	check if the character at which the 
+	pointer is at is already in the object or
+	 not cause if it is we will just have to 
+	 increment it by 1 or else we will have 
+	 to add it 
+
+	 2.if the char is a number/letter and key in object ,add one  to count
+
+	 3.if the char is a number/letter AND not in object ,add it to object and set value to 1
+
+->and then we will have to check for special character (space,period,etc) if there dont do it 
+	4.if character is something else(space,period,etc) dont do anything
+
+
+//return object
+
+}

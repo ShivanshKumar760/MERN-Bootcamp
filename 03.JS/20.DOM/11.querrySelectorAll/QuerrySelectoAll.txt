@@ -1,0 +1,2 @@
+So unlike querrySelector which only returns a single element a querrySelectorAll() returns a 
+array of elements that matches the selector ie class /tag name/id

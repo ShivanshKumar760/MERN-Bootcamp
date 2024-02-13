@@ -1,0 +1,86 @@
+The getElementsByClassName() method returns an array-like of objects of the child elements with a specified class name. The getElementsByClassName() method is available on the document element or any other elements.
+
+When calling the method on the document element, it searches the entire document and returns the child elements of the document:
+
+let elements = document.getElementsByClassName(names);
+Code language: JavaScript (javascript)
+However, when calling the method on a specific element, it returns the descendants of that specific element with the given class name:
+
+let elements = rootElement.getElementsByClassName(names);
+Code language: JavaScript (javascript)
+The method returns the elements which is a live HTMLCollection of the matches elements.
+
+The names parameter is a string that represents one or more class names to match; To use multiple class names, you separate them by space.
+
+JavaScript getElementsByClassName() method examples
+Let’s take some examples of using the getElementsByClassName() method.
+
+Suppose that you have the following HTML document:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript getElementsByClassName</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="menu">
+                <li class="item">HTML</li>
+                <li class="item">CSS</li>
+                <li class="item highlight">JavaScript</li>
+                <li class="item">TypeScript</li>
+            </ul>
+        </nav>
+        <h1>getElementsByClassName Demo</h1>
+    </header>
+    <section>
+        <article>
+            <h2 class="secondary">Example 1</h2>
+        </article>
+        <article>
+            <h2 class="secondary">Example 2</h2>
+        </article>
+    </section>
+</body>
+</html>
+
+
+1) Calling JavaScript getElementsByClassName() on an element example
+
+The following example illustrates how to use the getElementsByClassName() method to select the <li> items which are the descendants of the <ul> element:
+
+let menu = document.getElementById('menu');
+let items = menu.getElementsByClassName('item');
+
+let data = [].map.call(items, item => item.textContent);
+
+console.log(data);
+Code language: JavaScript (javascript)
+Output:
+
+['HTML', 'CSS', 'JavaScript', 'TypeScript']
+Code language: JavaScript (javascript)
+How it works:
+
+First, select the <ul> element with the class name menu using the getElementById() method.
+Then, select <li> elements, which are the descendants of the <ul> element, using the getElementsByClassName() method.
+Finally, create an array of the text content of <li> elements by borrowing the map() method of the Array object.
+2) Calling JavaScript getElementsByClassName() on the document example
+To search for the element with the class heading-secondary, you use the following code:
+
+let elements = document.getElementsByClassName('secondary');
+let data = [].map.call(elements, elem => elem.textContent);
+
+console.log(data);
+Code language: JavaScript (javascript)
+Output:
+
+["Example 1", "Example 2"]
+Code language: JavaScript (javascript)
+This example calls the getElementsByClassName() method on the document object. Therefore, it searches for the elements with the class secondary in the entire document.
+
+Summary
+Use the JavaScript getElementsByClassName() method to select the child elements of an element that has one or more give class names.

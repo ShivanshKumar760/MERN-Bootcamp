@@ -1,0 +1,22 @@
+CSS universal selector
+--------------------------
+The universal selector is used as a wildcard character.It selects all the elements on the page and stylised 
+it .
+
+universal selector is *
+
+    <head>
+        <style>
+            *
+            {text-align:center;color:blue;font-size:20px}
+        </style>
+    </head>
+    <body>
+        <h1>Welcome</h1>
+        <p>This style will appear on every paragraph</p>
+        <p id = "para">me too </p>
+        <p class="center">This paragraph should be in center with blue color </p>
+        <h2 class="center">This is a heading and it  should be in center with blue color </h2>
+
+    </body>
+</html>

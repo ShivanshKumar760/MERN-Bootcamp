@@ -1,0 +1,33 @@
+Inline CSS
+--------
+->We can apply css in a single element by inline css technique.
+->The inline CSS is also method to insert style sheet in html document
+
+->the method mitigates some advantage of style sheet in html document so it is advised to use this method 
+sparingly
+
+->if we want to use the inline CSS we should use inline css , we should use the style attribute to the 
+relevant tag 
+
+Syntax:
+---------------
+
+<html_tag style="css-property1:value;....css-propertyn:value;">content</html_tag>
+
+Example:
+<h2 style ="color : red; margin-left:40px;">Heading number 2</h2>
+
+<p>This paragraph tag is not affected</p>
+
+Disadvantage of inline css
+------------------------
+1)We cannot use the quotation within the inline css.If we use quotation the browser will interpret this as 
+an end of our style value 
+
+2)These style cannot be reused anywhere else 
+
+3)These style are tough to be edited because they are not stored at a single place.
+
+4)It is not possible to style pseudo-code and pseudo-classes in the with the inline css
+
+5)Inline Css does not provide browser cache advantage.

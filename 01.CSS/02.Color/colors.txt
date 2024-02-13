@@ -1,0 +1,33 @@
+Till Now in our previous module we saw how to use color in html in two ways :
+
+1)setting the background-color for a element or tag
+Ex:
+<body style="background-color:red;">//will put red in whole HTML page 
+2)setting color for text 
+<h1 style = "color:white;">Hello</h1> //will color the text Hello red 
+
+And if we look closely in both background-color and color we have used named color scheme that is 
+in both the background-color and the color under value of color we have used named color like 
+"red" and "white"
+
+But we can also use hexcode and rgb(x,y,b) value to set the color  or background-color of element
+
+Ex:
+rgb
+-----
+h1
+{
+    color:rgb(63,75,145);
+}
+
+or 
+
+hexcode
+--------
+body
+{
+    background-color:#808080 //whose rgb value is :	128,128,128
+}
+
+So basically in css colors are specified using predefined color names, or 
+RGB, HEX, HSL, RGBA, HSLA values.

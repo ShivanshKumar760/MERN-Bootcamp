@@ -1,0 +1,60 @@
+Alright welcome back now we're going to talk more about simplifyinh big O expressions
+
+
+Simplifying Big-O Expression:
+
+1.Constant don't matter
+
+ieO(2n) is O(n)
+
+O(500) is O(1)
+
+or O(13n^2) is O(n^2)
+
+
+2.Smaller terms don't matter 
+
+like O(n+10) is O(n) or O(1000n+50) is also O(n)
+and O(n^2+5n+8) now in this case always take the upper bound so it will be O(n^2)
+
+
+3.Arithmetic Operation are constant
+4.Variable assignment are constant
+5.accessing element in an array(by index) or object(by key) is constant
+
+6.In a loop,the complexity is the length of the loop times the complexity of whatever happens inside of the loop.
+
+
+Lets take two example to see there BIg-O
+
+1.log the max
+
+function logAtLeast5(n){
+	for(let i=1;i<=Math.max(5,n);i++)
+	{
+		console.log(i);
+	}
+}
+
+So time complexity of the loop is the lenght of the loop ie how many times it can run 
+
+
+here we have two value(5,n) as Math.max(5,n) now we have to take the worst condition which means the largest lenght so assuming n is greater than 5 
+
+the Big-O is O(n)
+
+
+2.Log the min
+
+function logAtMost(n){
+	for(let i=1;i<=Math.min(5,n);i++)
+	{
+		console.log(i);
+	}
+}
+
+So time complexity of the loop is the lenght of the loop ie how many times it can run 
+
+here we have two value(5,n) as Math.min(5,n) now we have to take the worst condition which means the largest lenght is 5 and since 5 is constant 
+
+Big-O is O(1)

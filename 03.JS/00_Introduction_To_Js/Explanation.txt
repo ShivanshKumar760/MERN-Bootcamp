@@ -1,0 +1,21 @@
+console.log("Hello world!");
+
+what this line of code does is it prints Hello world! on terminal screen or any console it is run on 
+
+console--is a operating systemm window or a web console through which a user can communicate with the computer/os and program
+or we can say a console is an application in which we can give a text as a input from the keyboard and get the text as  an output from the computer end.
+
+log -- are the message used to display a audit or a problem or to monitor on events occuring in program.
+
+
+console.log() is used to print a message ;
+
+there are other ways to print a message on computer using javaScript:
+console.log()
+console.info--print the text to the console as an informational message .
+
+console.error()--print the text to the console as error message .
+console.warn()--print the text to the console as warning message.
+
+
+and if we are using javascript in browser we can use alert() orr document.write() to display the message. 

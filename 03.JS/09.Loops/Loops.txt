@@ -1,0 +1,80 @@
+JavaScript loops
+The JavaScript loops are used to iterate the peice of code using for,while,do-while.It makes the code compact.It is mostly used in array to iterate over it.
+
+Types of loop in JavaScript
+1.for loop
+2.While loop
+3.do-while loop
+
+1)JavaScript for loop:
+----------------------
+The JavaScript for loop iterates the element for the fixed number of times.it shoukd be used if number of iteration is known.The Syntax of for-loop is given as:
+
+for(intialization;condition;increment)
+{
+	//code to be executed;
+}
+
+Example:
+
+for(let i=1;i<=5;i++)
+{
+	console.log(i);
+}
+-----------------------------------------
+
+2)JavaScript while loop
+
+The JavaScript while loop iterates the 
+element for the infinite number of times 
+.It Should be used if number of iteration is not known although it can  be  used also when number of iteration is known.The Syntax of while loop is
+
+while(condition)
+{
+	//code to be executed;
+}
+
+A while loop evaluates the condition inside the parenthesis ().
+If the condition evaluates to true, the code inside the while loop is executed.
+The condition is evaluated again.
+This process continues until the condition is false.
+When the condition evaluates to false, the loop stops.
+
+
+Example:
+1.if number of iteration is not known;
+	while(true)
+	{
+		//condition to break the loop at certain point
+		console.log(a);
+		if(a==20)
+		{
+			break;
+		}
+		i++;
+	}
+
+2.If number of iteration is known:
+	while(i<=15)
+	{
+		console.log(i);
+		i++;
+	}
+--------------------------------
+
+3)JavaScript do-while loop
+
+The JavaScript do while loop iterates the element for the infinite number of times like while loop.But the code is executed at least once whether conndition is true or false.The syntax of do while loop is:
+
+do
+{
+	//code;
+}while(condition);
+
+example:
+let i=1;
+do
+{
+	console.log(i);
+	i++;
+}while(i<=25);

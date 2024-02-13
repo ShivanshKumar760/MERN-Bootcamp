@@ -1,0 +1,38 @@
+So In Dom manipulation we can maipulate text using JavaScript by two ways:
+
+1.innerHTML
+2.textContent
+
+How to use both of them :
+
+1.document.querySelector("tag_name").innerHTML="value";
+
+2.document.querySelector("tag_name").textContent="value";
+
+
+Now at first they might seem same but actually there working is  different 
+well innerHTML as the name suggests return anything inside a perticular html tag
+like:
+
+<h1><strong>Hello</strong></h1>
+
+document.querySelector("h1").innerHTML;
+>>><strong>Hello</strong>//that is it returned the html residing inside the h1 tag
+
+but if we use textContent it only returns the text content to be shown on the browser.
+
+document.querySelector("h1").textContent;
+>>>Hello
+
+And cause of that with innerHTML we can manipulation the way our text should look by adding html
+tag inside innerHTML proerty
+
+
+document.querySelector("h1").innerHTML="<em>Hey,What'up</em>;
+
+but we cant do the same thing with textContent
+document.querySelector("h1").textContentL="<em>Hey,What'up</em>;//error undefined
+
+
+
+When you set the textContent property, all child nodes are removed and replaced by only one new text node.

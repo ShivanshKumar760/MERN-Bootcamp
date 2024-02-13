@@ -1,0 +1,90 @@
+So from last directory material we understood that block element take more space compare to a inline 
+element
+
+So why to use block tag/block element when they take so much line and space and why not just use 
+inline tag:
+
+The Problem with inline tag is that we cant change it's height and width property
+lets take a example to learn :
+
+Ex:
+----
+
+<body>
+    <p>Hello</p>
+    <p>World</p>
+    <span>Hello</span>
+    <span>World</span>
+</body>
+
+
+lets give this a background color :
+
+css 
+---
+p{background-color:red;}
+span{background-color:blue;}
+
+
+We gave this color to identify the  changes in the element 
+
+So as we can see the area in which background-color blue is genrated is the required 
+area coverd by the word and that is why the span is inline tag
+
+Where as the red background color has taken up the whole line because the css is 
+applied to <p> tag which is a block tag
+
+
+Now lets change the height and width of the the both span and p tag
+
+<body>
+    <p>Hello</p>
+    <p>World</p>
+    <span>Hello</span>
+    <span>World</span>
+</body>
+
+
+css 
+---
+p{background-color:red;width:200px;}
+span{background-color:blue;width:200px;}
+
+
+So now as we can see <p> tag width has been reduced but still blocks the line 
+where as <span> tag width is still same and it dosent change 
+
+Now , the Problem with block tag is although it can change its width it dosent
+let any other element sit / get displayed on that line 
+
+and in order to overcome this problem we have css property display and via this we can
+change inline to block and block to inline
+
+But although we can change block to inline ,but as soon as we change block to inline
+we loose the block tag property to change width and height
+
+Similarly if we change inline tag to block then we can change it width and height.
+
+
+<body>
+    <p>Hello</p>
+    <p>World</p>
+    <span>Hello</span>
+    <span>World</span>
+</body>
+
+
+css 
+---
+p{background-color:red;width:200px;display:inline;}
+span{background-color:blue;width:200px;display:block;}
+
+So we can see <p> tag element are in same line and as we have changed their display 
+property and now we cannot change their property like width and height and same goes
+for span tag which is now in block display and it can change its width and height.
+
+
+So now what do to so that we can get the inline tag ability to take the amount of 
+space required byt word but also use block tag property like changing width and height
+
+well for that we use display:inline-block;
