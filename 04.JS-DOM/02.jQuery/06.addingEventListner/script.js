@@ -41,9 +41,9 @@ $(".changeH1").keypress(function(event){
 
 
 //We can even select the enitre document using jQuery and apply event onto it via document or body
-// $(document).keypress(function(event){
+// `$(document).keypress(function(event){
 //     $("h1").text(event.key);
-//     });
+//     });`
 //or via body
 $("body").click(function()
 {
