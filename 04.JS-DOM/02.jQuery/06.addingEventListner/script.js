@@ -49,3 +49,9 @@ $("body").click(function()
 {
     alert("Hello");
 });
+
+//there is another way to add event listner and that is using the ,
+//.on("event_name",callbackFunction(){}) method 
+$(".hoverBtn").on("mouseover",function(){
+    $("h1").css("color","pink");
+});
