@@ -1,0 +1,134 @@
+Now What is file system in JavaScript ?
+->File system is the native node module that allows us to access the local file storage and 
+apply operation like read and write operation onto the file
+
+its source code is available at :lib/fs.js 
+
+Now in order to use it we can either import it according to ES ie new EcmaScript rule or we can 
+use the promise based api to use them using require() function
+
+
+The node:fs module enables interacting with the file system in a way modeled on standard POSIX functions.
+
+To use the promise-based APIs:
+
+const fs = require('node:fs/promises')
+To use the callback and sync APIs:
+
+const fs = require('node:fs');
+
+
+All file system operations have synchronous, callback, and promise-based forms, and are accessible using both
+ CommonJS syntax and ES6 Modules (ESM).
+
+
+fs.readFileSync(path[, options])#
+
+path <string> | <Buffer> | <URL> | <integer> filename or file descriptor
+options <Object> | <string>
+    encoding <string> | <null> Default: null
+    flag <string> See support of file system flags. Default: 'r'.
+Returns: <string> | <Buffer>
+
+Returns the contents of the path.
+
+For detailed information, see the documentation of the asynchronous version of this API: fs.readFile().
+
+If the encoding option is specified then this function returns a string. Otherwise it returns a buffer.
+
+Similar to fs.readFile(), when the path is a directory, the behavior of fs.readFileSync() is platform-specific.
+
+import { readFileSync } from 'node:fs';
+
+// macOS, Linux, and Windows
+readFileSync('<directory>');
+// => [Error: EISDIR: illegal operation on a directory, read <directory>]
+
+//  FreeBSD
+readFileSync('<directory>'); // => <data> 
+
+
+
+
+
+
+
+
+fs.writeFile(file, data[, options], callback)
+
+file <string> | <Buffer> | <URL> | <integer> filename or file descriptor
+
+data <string> | <Buffer> | <TypedArray> | <DataView>
+
+options <Object> | <string>
+    ->encoding <string> | <null> Default: 'utf8'
+
+    ->mode <integer> Default: 0o666
+
+    ->flag <string> See support of file system flags. Default: 'w'.
+
+    ->flush <boolean> If all data is successfully written to the file, and flush is true, fs.fsync() is used to flush the data. Default: false.
+
+    ->signal <AbortSignal> allows aborting an in-progress writeFile
+
+callback <Function>
+    ->err <Error> | <AggregateError>
+
+When file is a filename, asynchronously writes data to the file, replacing the file if it already exists. data can be a string or a buffer.
+
+When file is a file descriptor, the behavior is similar to calling fs.write() directly (which is recommended). See the notes below on using a file descriptor.
+
+The encoding option is ignored if data is a buffer.
+
+The mode option only affects the newly created file. See fs.open() for more details.
+
+import { writeFile } from 'node:fs';
+import { Buffer } from 'node:buffer';
+
+const data = new Uint8Array(Buffer.from('Hello Node.js'));
+writeFile('message.txt', data, (err) => {
+  if (err) throw err;
+  console.log('The file has been saved!');
+});
+
+
+If options is a string, then it specifies the encoding:
+import { writeFile } from 'node:fs';
+
+writeFile('message.txt', 'Hello Node.js', 'utf8', callback);
+
+It is unsafe to use fs.writeFile() multiple times on the same file without waiting for the callback. For this scenario, fs.createWriteStream() is recommended.
+
+Similarly to fs.readFile - fs.writeFile is a convenience method that performs multiple write calls internally to write the buffer passed to it. For performance sensitive code consider using fs.createWriteStream().
+
+It is possible to use an <AbortSignal> to cancel an fs.writeFile(). Cancelation is "best effort", and some amount of data is likely still to be written.
+
+import { writeFile } from 'node:fs';
+import { Buffer } from 'node:buffer';
+
+const controller = new AbortController();
+const { signal } = controller;
+const data = new Uint8Array(Buffer.from('Hello Node.js'));
+writeFile('message.txt', data, { signal }, (err) => {
+  // When a request is aborted - the callback is called with an AbortError
+});
+// When the request should be aborted
+controller.abort(); COPY
+Aborting an ongoing request does not abort individual operating system requests but rather the internal buffering fs.writeFile performs.
+
+Using fs.writeFile() with file descriptors#
+When file is a file descriptor, the behavior is almost identical to directly calling fs.write() like:
+
+import { write } from 'node:fs';
+import { Buffer } from 'node:buffer';
+
+write(fd, Buffer.from(data, options.encoding), callback); COPY
+The difference from directly calling fs.write() is that under some unusual conditions, fs.write() might write only part of the buffer and need to be retried to write the 
+remaining data, whereas fs.writeFile() retries until the data is entirely written (or an error occurs).
+
+The implications of this are a common source of confusion. In the file descriptor case, the file is not replaced! The data is not necessarily written to the beginning 
+of the file, and the file's original data may remain before and/or after the newly written data.
+
+For example, if fs.writeFile() is called twice in a row, first to write the string 'Hello', then to write the string ', World', 
+the file would contain 'Hello, World', and might contain some of the file's original data (depending on the size of the original file, and the position of the file descriptor). 
+If a file name had been used instead of a descriptor, the file would be guaranteed to contain only ', World'.

@@ -1,0 +1,18 @@
+//What are native module in JavaScript 
+// Native module can be understand as pre built library packed into javaScript local runtime
+//enviorment that it can be treated as the pre install game which comes with the windows 
+//operating system like pinball or minesweeper
+
+//so node module are the code written by someone else but we can use it in our code it can also
+//be treated like a pre built function and they are the starting tool set to make server
+//side application and the code that was written into native node module are File access
+//ie reading and writing into local file system or the server computer another pre written 
+//module are networking module which is important for the backend of our application and there 
+//are lot more which can be found in Nodejs Documentation and we will use some module 
+//to built our app
+
+//With native javascript which run in the web browser we cant access the user file system cause 
+//that will be treated as mallicious code and is wrong practise as it harms the privacy of user
+
+//but in case of nodejs cause it brings out the javascript out of the browser we can access//
+//the file system locally 
