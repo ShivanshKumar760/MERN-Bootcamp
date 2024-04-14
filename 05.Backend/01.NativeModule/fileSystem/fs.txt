@@ -1,5 +1,5 @@
 Now What is file system in JavaScript ?
-->File system is the native node module that allows us to access the local file storage and 
+->File system is the native nodemodule that allows us to access the local file storage and 
 apply operation like read and write operation onto the file
 
 its source code is available at :lib/fs.js 
@@ -85,7 +85,7 @@ The mode option only affects the newly created file. See fs.open() for more deta
 import { writeFile } from 'node:fs';
 import { Buffer } from 'node:buffer';
 
-const data = new Uint8Array(Buffer.from('Hello Node.js'));
+const data = new Uint8Array(Buffer.from('Hello node.js'));
 writeFile('message.txt', data, (err) => {
   if (err) throw err;
   console.log('The file has been saved!');
@@ -95,7 +95,7 @@ writeFile('message.txt', data, (err) => {
 If options is a string, then it specifies the encoding:
 import { writeFile } from 'node:fs';
 
-writeFile('message.txt', 'Hello Node.js', 'utf8', callback);
+writeFile('message.txt', 'Hello node.js', 'utf8', callback);
 
 It is unsafe to use fs.writeFile() multiple times on the same file without waiting for the callback. For this scenario, fs.createWriteStream() is recommended.
 
@@ -108,7 +108,7 @@ import { Buffer } from 'node:buffer';
 
 const controller = new AbortController();
 const { signal } = controller;
-const data = new Uint8Array(Buffer.from('Hello Node.js'));
+const data = new Uint8Array(Buffer.from('Hello node.js'));
 writeFile('message.txt', data, { signal }, (err) => {
   // When a request is aborted - the callback is called with an AbortError
 });

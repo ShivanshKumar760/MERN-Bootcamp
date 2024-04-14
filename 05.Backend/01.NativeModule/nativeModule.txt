@@ -3,12 +3,12 @@
 //enviorment that it can be treated as the pre install game which comes with the windows 
 //operating system like pinball or minesweeper
 
-//so node module are the code written by someone else but we can use it in our code it can also
+//so nodemodule are the code written by someone else but we can use it in our code it can also
 //be treated like a pre built function and they are the starting tool set to make server
-//side application and the code that was written into native node module are File access
+//side application and the code that was written into native node-module are File access
 //ie reading and writing into local file system or the server computer another pre written 
 //module are networking module which is important for the backend of our application and there 
-//are lot more which can be found in Nodejs Documentation and we will use some module 
+//are lot more which can be found in nodejs Documentation and we will use some module 
 //to built our app
 
 //With native javascript which run in the web browser we cant access the user file system cause 
@@ -16,3 +16,42 @@
 
 //but in case of nodejs cause it brings out the javascript out of the browser we can access//
 //the file system locally 
+
+/*
+Now if we go to this URL below:
+[https://nodejs.org/docs/latest/api/]->this will take you to the documentation of nodejs
+native module and there are a lot of module specifically lot of native module and we are not 
+going to go through all of them ie we are not looking each one by one cause that will take year
+to do so plus we dont have to right now if we need those module in future we can 
+refer to nodejs documentation or just google it 
+
+But Right now lets look at the most important and basic module of nodejs which is also a 
+basic yet important feature of nodejs runtime and that is the:
+|
+|______File System Module
+
+
+File System Module 
+---------------------
+->The file system is a native module or library which holds function to manage and
+access file on local storage of computer ie localhost or server storage 
+
+->and in order to start using it we need to "import" the [node:fs] module in our index.js file 
+or we can use the "require" syntax of the CJS ie commmon JavaScript pattern to runn bits of 
+code that we need from the node:fs module
+
+->import method is part of newly ESM ie EcmaScript6 Module and require is part of CJS
+ie common js pattern
+
+->File system module source code is at :
+{https://github.com/nodejs/node/blob/v21.7.3/lib/fs.js}
+
+->To use the promise-based API :
+CJS:const fs = require('node:fs/promises');
+ESM:import * as fs from 'node:fs/promises';
+
+->To use the callback-based and synchronous API:
+CJS:const fs=require("node:fs");
+ESM:import * as fs from 'node:fs';
+
+/*
